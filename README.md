@@ -4,35 +4,25 @@ English | [中文](README_zh_CN.md)
 
 ## Overview
 
-Sancho Vue3 Seed aims to provide out-of-the-box frontend scalfold for web project initiation. It is a light weight scalfold with no UI library, but installed and configured the most widely used libraries: 
+Sancho Vue3 Seed aims to provide an out-of-the-box light weight frontend scalfold without any UI libraries. With Sancho Vue3 Seed, you can easily initiate your web project. All you need to do is to choose UI library or just do all the rest jobs by yourself. 
 
-- Vue Router v4 Ready 
+## Features
 
-- State management with Vuex v4 Ready 
+- Common Function and Libraries Ready
 
-- I18n Ready 
-
-- Axios Ready
-
-- Mock Server Ready 
-
-- Common library installed as Vue global property
+  Vue Router, Vuex, I18n, Axios, Mock Server are installed and configured. Libraries like dayjs or lodash are loaded as Vue3 global properties.
 
 - Multiple Development and Packaging Modes Ready
 
-We also provide basic functions and some practiced convertions:
+- Throw-In  
 
-- Utility Functions  
+  You can add `route`, `store`, `i18n`, `hook` and `mock` files in certain folder and the scalfold will automatically load them. 
 
-  Such as deepClone etc
+- Project Hooks  
 
-- Hooks for different kinds of life circles  
+  We provide several hooks for different kinds of life circles, such as `What to do before Vue initialized` or `What to do before and after axios request`. 
 
-  Such as hook before axios request or after response etc
-
-- Global Setting File 
-
-With Sancho Vue3 Seed, you can easily initiate your web project. All you need to do is to choose UI library or just do all the rest jobs by yourself.
+- Utiltity Functions
 
 ## Install and Run
 
