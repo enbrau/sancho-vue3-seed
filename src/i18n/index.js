@@ -20,7 +20,7 @@ for (const langFilePath in langFiles) {
     lodash.set(langs.messages, lang + '.' + langPackName, langFile.default)
   }
 
-  console.log(`[Sancho] Language pack loaded: ${lang}::${langPackName}`)
+  console.log(`[Sancho] Language pack loaded: ${lang} - ${langPackName}`)
 }
 
 export default createI18n(langs)
