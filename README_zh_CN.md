@@ -1,6 +1,6 @@
 # Sancho Vue3 Seed
 
-[English][(README.md) | 中文
+[English](README.md) | 中文
 
 ## 概述
 
