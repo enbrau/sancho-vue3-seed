@@ -4,7 +4,7 @@ English | [中文](README_zh_CN.md)
 
 ## Overview
 
-Sancho Vue3 Seed aims to provide an out-of-the-box light weight frontend scalfold without any UI libraries. With Sancho Vue3 Seed, you can easily initiate your web project. All you need to do is to choose UI library or just do all the rest jobs by yourself. 
+Sancho Vue3 Seed is base on Vue3 and Vite, and aims to provide an out-of-the-box light weight frontend scalfold without any UI libraries. With Sancho Vue3 Seed, you can easily initiate your web project. All you need to do is to choose UI library or just do all the rest jobs by yourself. 
 
 ## Features
 
