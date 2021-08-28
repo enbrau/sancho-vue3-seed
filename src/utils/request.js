@@ -1,5 +1,6 @@
 import axios from 'axios'
 import settings from '@/settings'
+import { requestHook, responseHook } from '@/hooks'
 
 const service = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
@@ -10,9 +11,8 @@ const service = axios.create({
 service.interceptors.request.use(
   request => {
     try {
-      if (settings.debug) {
-        console.log(request)
-      }
+      requestHook.call(request)
+
       // TODO
     } catch(e) {
       console.error('Error handling request: ', e)
@@ -32,9 +32,8 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     try {
-      if (settings.debug) {
-        console.log(response)
-      }
+      responseHook.call(response)
+
       // TODO
     } catch(e) {
       console.error('Error handling response: ', e)
@@ -50,3 +49,5 @@ service.interceptors.response.use(
     return Promise.reject(error)
   }
 )
+
+export default service
