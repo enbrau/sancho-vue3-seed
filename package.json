@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite --mode development",
-    "dev:online": "vite --mode online",
-    "build": "vite build --mode production",
-    "build:stage": "vite build --mode stage"
+    "dev:online": "cross-env NODE_ENV=online vite --mode online",
+    "build": "cross-env NODE_ENV=production vite build --mode production",
+    "build:stage": "cross-env NODE_ENV=stage vite build --mode stage"
   },
   "dependencies": {
     "axios": "^0.21.1",
