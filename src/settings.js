@@ -16,30 +16,6 @@ export default {
    */
   debug: true,
 
-  /**
-   * @type {boolean} true | false
-   * @description Whether need tagsView
-   */
-  tagsView: true,
-
-  /**
-   * @type {boolean} true | false
-   * @description Whether fix the header
-   */
-  fixedHeader: true,
-
-   /**
-    * @type {boolean} true | false
-    * @description Whether show the logo in sidebar
-    */
-  sidebarLogo: true,
-
-  /**
-   * @type {boolean} true | false
-   * @description Whether close sidebar at beginning
-   */
-  collapseSidebar: true,
-
   client: {
 
     withCredentials: true,
@@ -48,16 +24,8 @@ export default {
 
   },
 
-  theme: {
-
-    enableAutoThemeModeDetect: false,
-
-    defaultThemeMode: 'light'
-
-  }
-
   // =========================================================================================
-  // !!! The following options cannot be overwritten by other entry settings files
+  // !!! You can add your custom settings below.
   // =========================================================================================
 
 
