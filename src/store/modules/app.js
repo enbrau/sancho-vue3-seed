@@ -1,37 +1,36 @@
 /* eslint no-shadow: ["error", { "allow": ["state"] }] */
 
-import { getInitialLocale, getInitialThemeMode } from '@/utils/framework'
+import { getInitialLocale } from '@/utils/framework'
 
-const TOGGLE_THEME_MODE = 'TOGGLE_THEME_MODE'
-const SET_THEME_MODE    = 'SET_THEME_MODE'
-const SET_LOCALE        = 'SET_LOCALE'
+const SET_LOCALE                = 'SET_LOCALE'
+const SET_WINDOW_INNER_HEIGHT   = 'SET_WINDOW_INNER_HEIGHT'
+const SET_WINDOW_INNER_WIDTH    = 'SET_WINDOW_INNER_WIDTH'
 
 const state = {
-  themeMode: getInitialThemeMode(),
+  windowInnerWidth: window.innerWidth,
+  windowInnerHeight: window.innerHeight,
   locale: getInitialLocale()
 }
 
 const mutations = {
-  [TOGGLE_THEME_MODE]: (state) => {
-    state.themeMode = state.themeMode !== 'lignt' ? 'lignt' : 'dark'
-  },
-  [SET_THEME_MODE]: (state, themeMode) => {
-    state.themeMode = themeMode
-  },
   [SET_LOCALE]: (state, locale) => {
     state.locale = locale
+  },
+  [SET_WINDOW_INNER_HEIGHT]: (state, windowInnerHeight) => {
+    state.windowInnerHeight = windowInnerHeight
+  },
+  [SET_WINDOW_INNER_WIDTH]: (state, windowInnerWidth) => {
+    state.windowInnerWidth = windowInnerWidth
   }
 }
 
 const actions = {
-  toggleThemeMode({ commit }) {
-    commit(TOGGLE_THEME_MODE)
-  },
-  setThemeMode({ commit }, themeMode) {
-    commit(SET_THEME_MODE, themeMode)
-  },
   setLocale({ commit }, locale) {
     commit(SET_LOCALE, locale)
+  },
+  resize({ commit }, { windowInnerHeight, windowInnerWidth }) {
+    commit(SET_WINDOW_INNER_HEIGHT, windowInnerHeight)
+    commit(SET_WINDOW_INNER_WIDTH, windowInnerWidth)
   }
 }
 

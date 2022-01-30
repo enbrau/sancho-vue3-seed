@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import './resize'
+
 import { markRaw } from '@vue/reactivity'
 import settings from '@/settings'
 
